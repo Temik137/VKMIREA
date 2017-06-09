@@ -8,6 +8,7 @@ using System.Windows.Media.Effects;
 using GalaSoft.MvvmLight.CommandWpf;
 using VkMirea.AppContext;
 using VkMirea.DialogWindows;
+using VkMirea.Services;
 
 #endregion
 
@@ -28,7 +29,7 @@ namespace VkMirea.ViewModel.Commands
 
         private static void OnGoToMainPage()
         {
-            throw new NotImplementedException();
+            AppNavigationService.NavigationService.Navigate(new Uri("MainPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private static void OnGoExamineMode()
@@ -77,14 +78,14 @@ namespace VkMirea.ViewModel.Commands
             AppState.AppModeState = newModeState;
         }
 
-        private static void ChangeMainWindowContent(object newContent)
+        private static void ChangeMainWindowContent(Page toThisPage)
         {
-            Application.Current.MainWindow.Content = newContent;
+            AppNavigationService.NavigationService.Navigate(toThisPage);
         }
 
-        private static void ChangeMainWindowContent(object newContent, bool mustClearBackground)
+        private static void ChangeMainWindowContent(Page toThisPage, bool mustClearBackground)
         {
-            Application.Current.MainWindow.Content = newContent;
+            AppNavigationService.NavigationService.Navigate(toThisPage);
 
             if (mustClearBackground)
             {

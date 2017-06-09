@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Src\VKMIREA\VKMIREA\obj\Debug\
+C:\Src\VKMIREA\VkMirea\obj\Debug\
 VkMirea
 none
 false
 CODE_ANALYSIS;DEBUG;TRACE
-C:\Src\VKMIREA\VKMIREA\App.xaml
-9478152782
+C:\Src\VKMIREA\VkMirea\App.xaml
+9631448470
 
-322012099650
-681514791438
-ChoosePage.xaml;CustomControls\Block.xaml;CustomControls\BlocksViewer.xaml;DialogWindows\InfoDialog.xaml;DialogWindows\LoginDialog.xaml;ExaminePage.xaml;MainWindow.xaml;Skins\MainSkin.xaml;TestingPage.xaml;
+33-472315644
+681733871555
+ChoosePage.xaml;CustomControls\Block.xaml;CustomControls\BlocksViewer.xaml;DialogWindows\InfoDialog.xaml;DialogWindows\LoginDialog.xaml;ExaminePage.xaml;MainPage.xaml;Skins\MainSkin.xaml;TestingPage.xaml;
 
 True
 
