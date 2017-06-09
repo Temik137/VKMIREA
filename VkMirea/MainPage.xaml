@@ -6,9 +6,7 @@
       xmlns:local="clr-namespace:VkMirea"
       xmlns:converters="clr-namespace:VkMirea.Converters"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="MainPage"
-      ShowsNavigationUI="False"
+      d:DesignHeight="377.219" d:DesignWidth="620.414"
       DataContext="{Binding Main, Source={StaticResource Locator}}"
       Loaded="MainPage_OnLoaded">
 

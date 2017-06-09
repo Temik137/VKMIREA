@@ -95,6 +95,9 @@
     <Compile Include="ExaminePage.xaml.cs">
       <DependentUpon>ExaminePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FrameWindow.xaml.cs">
+      <DependentUpon>FrameWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -132,6 +135,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ExaminePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FrameWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

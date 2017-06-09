@@ -43,3 +43,5 @@ C:\Src\VKMIREA\VkMirea\obj\Debug\VkMirea.Properties.Resources.resources
 C:\Src\VKMIREA\VkMirea\obj\Debug\VkMirea.csproj.GenerateResource.Cache
 C:\Src\VKMIREA\VkMirea\obj\Debug\VkMirea.exe
 C:\Src\VKMIREA\VkMirea\obj\Debug\VkMirea.pdb
+C:\Src\VKMIREA\VkMirea\obj\Debug\FrameWindow.g.cs
+C:\Src\VKMIREA\VkMirea\obj\Debug\FrameWindow.baml

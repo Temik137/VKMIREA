@@ -10,11 +10,11 @@ none
 false
 CODE_ANALYSIS;DEBUG;TRACE
 C:\Src\VKMIREA\VkMirea\App.xaml
-9631448470
+102024689220
 
-29-243749761
+30193900587
 681733871555
-ChoosePage.xaml;CustomControls\Block.xaml;CustomControls\BlocksViewer.xaml;DialogWindows\InfoDialog.xaml;DialogWindows\LoginDialog.xaml;ExaminePage.xaml;MainPage.xaml;Skins\MainSkin.xaml;TestingPage.xaml;
+ChoosePage.xaml;CustomControls\Block.xaml;CustomControls\BlocksViewer.xaml;DialogWindows\InfoDialog.xaml;DialogWindows\LoginDialog.xaml;ExaminePage.xaml;FrameWindow.xaml;MainPage.xaml;Skins\MainSkin.xaml;TestingPage.xaml;
 
 False
 
