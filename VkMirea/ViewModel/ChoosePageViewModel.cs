@@ -9,7 +9,7 @@ namespace VkMirea.ViewModel
     public class ChoosePageViewModel : ViewModelBase
     {
         private IDataService dataService;
-        private ObservableCollection<string> instrumentsList = new ObservableCollection<string>();
+        private ObservableCollection<InstrumentsCollection> instrumentsList = new ObservableCollection<InstrumentsCollection>();
         public RelayCommand GoToMainPage => AppCommands.GoToMainPageCommand;
         
 
@@ -26,12 +26,12 @@ namespace VkMirea.ViewModel
                                                      }
                                                      foreach (var instrumentsCollection in instrumentsCollections)
                                                      {
-                                                         InstrumentsList.Add(instrumentsCollection.Name);
+                                                         InstrumentsList.Add(instrumentsCollection);
                                                      }
                                                  });
         }
 
-        public ObservableCollection<string> InstrumentsList
+        public ObservableCollection<InstrumentsCollection> InstrumentsList
         {
             get => instrumentsList;
             set => Set(ref instrumentsList, value);

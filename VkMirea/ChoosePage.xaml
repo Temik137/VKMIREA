@@ -22,7 +22,13 @@
         <StackPanel Orientation="Horizontal">
             <Button Content="Назад" Command="{Binding GoToMainPage}"></Button>
         </StackPanel>
-        <ListView Grid.Column="0" Grid.Row="1" ItemsSource="{Binding InstrumentsList}" />
-        <cc:BlocksViewer Grid.Column="1" Grid.Row="1" />
+        <ListView Grid.Column="0" Grid.Row="1" ItemsSource="{Binding InstrumentsList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            <cc:BlocksViewer Grid.Column="1" Grid.Row="1" />
     </Grid>
 </Page>

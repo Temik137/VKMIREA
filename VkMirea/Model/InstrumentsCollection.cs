@@ -5,7 +5,7 @@ namespace VkMirea.Model
 {
     public class InstrumentsCollection
     {
-        public string Name;
-        public List<Block> BlocksCollection;
+        public string Name { get; set; }
+        public List<Block> BlocksCollection { get; set; }
     }
 }
