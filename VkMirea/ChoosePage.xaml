@@ -1,0 +1,28 @@
+﻿<Page x:Class="VkMirea.ChoosePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:VkMirea"
+      xmlns:cc="clr-namespace:VkMirea.CustomControls"
+      mc:Ignorable="d"
+      d:DesignHeight="349.704" d:DesignWidth="634.615"
+      Title="ChoosePage"
+      DataContext="{Binding ChoosePageVM, Source={StaticResource Locator}}">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Назад" Command="{Binding GoToMainPage}"></Button>
+        </StackPanel>
+        <ListView Grid.Column="0" Grid.Row="1" ItemsSource="{Binding InstrumentsList}" />
+        <cc:BlocksViewer Grid.Column="1" Grid.Row="1" />
+    </Grid>
+</Page>

@@ -1,0 +1,57 @@
+﻿<Window x:Class="VkMirea.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:ignore="http://www.galasoft.ch/ignore"
+        xmlns:converters="clr-namespace:VkMirea.Converters"
+        xmlns:app="clr-namespace:VkMirea.AppContext"
+        mc:Ignorable="d ignore"
+        Title="Симулятор оборудования цикла РЭБ"
+        MinHeight="300"
+        MinWidth="500"
+        DataContext="{Binding Main, Source={StaticResource Locator}}" d:DesignWidth="732" d:DesignHeight="423">
+    
+    <Window.Background>
+        <ImageBrush ImageSource="Design/Images/VkBackground.jpg"/>
+    </Window.Background>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Skins/MainSkin.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" Margin="10">
+            <Button Content="Информация" Command="{Binding OpenInfoDialog}"/>
+            <Button Content="Инструкция" />
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" Margin="10">
+            <Button Content="Войти" Command="{Binding OpenLoginDialog}"
+                    Visibility="{Binding IsUnauthorized, Converter={converters:BooleanToVisibilityConverter}}" />
+            <Button Content="Экзамен" Command="{Binding GoExamineMode}"
+                    Visibility="{Binding IsAuthorized, Converter={converters:BooleanToVisibilityConverter}}" />
+            <Button Content="Обучение" Command="{Binding GoTrainingMode}" />
+        </StackPanel>
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <Label Content="Военная кафедра МИРЭА" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Label>
+            <Image Grid.Column="1" Source="Design/Images/VkMireaLogo.png" Width="100" />
+        </Grid>
+    </Grid>
+    
+</Window>
