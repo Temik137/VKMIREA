@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
+using VkMirea.AppContext;
 using VkMirea.CustomControls;
 using VkMirea.Model;
 using VkMirea.ViewModel.Commands;
@@ -12,8 +13,15 @@ namespace VkMirea.ViewModel
         private IDataService dataService;
         private ObservableCollection<InstrumentsCollection> instrumentsList = new ObservableCollection<InstrumentsCollection>();
         private InstrumentsCollection selectedInstrumentCollection;
+
+        #region Commands
+
         public RelayCommand GoToMainPage => AppCommands.GoToMainPageCommand;
-        
+        public RelayCommand OpenLoginDialog => AppCommands.OpenLoginDialogWindowCommand;
+
+        #endregion
+
+        public bool IsUnauthorized => AppState.LoginState != LoginState.Authorized;
 
         public ChoosePageViewModel(IDataService dataService)
         {

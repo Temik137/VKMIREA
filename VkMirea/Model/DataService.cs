@@ -1,11 +1,10 @@
-﻿using System;
+﻿#region Usings
+
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Windows.Controls;
-using System.Windows.Documents;
-using System.Windows.Media.Imaging;
-using VkMirea.CustomControls;
-using Block = VkMirea.CustomControls.Block;
+
+#endregion
 
 namespace VkMirea.Model
 {
@@ -21,9 +20,9 @@ namespace VkMirea.Model
             list.Add(new Instrument("second", imageUri));
             list.Add(new Instrument("third", imageUri));
 
-            item.Add(new InstrumentsCollection { Instruments = list, Name = "testCollection1" });
-            item.Add(new InstrumentsCollection { Instruments = list, Name = "testCollection2" });
-            item.Add(new InstrumentsCollection { Instruments = list, Name = "testCollection3" });
+            item.Add(new InstrumentsCollection {Instruments = list, Name = "testCollection1"});
+            item.Add(new InstrumentsCollection {Instruments = list, Name = "testCollection2"});
+            item.Add(new InstrumentsCollection {Instruments = list, Name = "testCollection3"});
             callback(item, null);
         }
     }

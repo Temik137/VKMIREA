@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:VkMirea"
       xmlns:cc="clr-namespace:VkMirea.CustomControls"
+      xmlns:converters="clr-namespace:VkMirea.Converters"
       mc:Ignorable="d"
       d:DesignHeight="349.704" d:DesignWidth="634.615"
       Title="ChoosePage"
@@ -20,27 +21,18 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal">
-            <Button Content="Назад" Command="{Binding GoToMainPage}"></Button>
+            <Button Content="Назад" Command="{Binding GoToMainPage}" />
+            <Button Content="Войти" Command="{Binding OpenLoginDialog}" Visibility="{Binding IsUnauthorized, Converter={converters:BooleanToVisibilityConverter}}" />
         </StackPanel>
-        <ListView Grid.Column="0" Grid.Row="1" SelectedItem="{Binding SelectedInstrumentCollection}" ItemsSource="{Binding InstrumentsList}">
+        <ListView Grid.Column="0" Grid.Row="1" SelectedItem="{Binding SelectedInstrumentCollection}"
+                  ItemsSource="{Binding InstrumentsList}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Name}"/>
+                    <TextBlock Text="{Binding Name}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <!--<ItemsControl Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=SelectedInstrumentCollection.Instruments}" Background="White">
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <WrapPanel/>
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <cc:Block TitleName="{Binding Path=Name}" ImageSource="{Binding Path=ImagePath}"/>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>-->
-        <cc:BlocksViewer Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=SelectedInstrumentCollection.Instruments}" />
+        <cc:BlocksViewer Grid.Column="1" Grid.Row="1"
+                         ItemsSource="{Binding Path=SelectedInstrumentCollection.Instruments}" />
     </Grid>
 </Page>
