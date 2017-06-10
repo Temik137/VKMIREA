@@ -84,7 +84,6 @@
       <DependentUpon>BlocksViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="CustomControls\ViewModel\BlocksViewerViewModel.cs" />
-    <Compile Include="CustomControls\ViewModel\BlockViewModel.cs" />
     <Compile Include="Design\DesignDataService.cs" />
     <Compile Include="DialogWindows\InfoDialog.xaml.cs">
       <DependentUpon>InfoDialog.xaml</DependentUpon>
@@ -104,6 +103,7 @@
     <Compile Include="Model\DataItem.cs" />
     <Compile Include="Model\DataService.cs" />
     <Compile Include="Model\IDataService.cs" />
+    <Compile Include="Model\Instrument.cs" />
     <Compile Include="Model\InstrumentsCollection.cs" />
     <Compile Include="Services\AppNavigationService.cs" />
     <Compile Include="TestingPage.xaml.cs">
@@ -192,6 +192,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Design\Images\VkBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Design\Images\randomimage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

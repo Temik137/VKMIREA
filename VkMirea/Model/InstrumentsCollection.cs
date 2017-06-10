@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using VkMirea.CustomControls;
 
 namespace VkMirea.Model
@@ -6,6 +7,6 @@ namespace VkMirea.Model
     public class InstrumentsCollection
     {
         public string Name { get; set; }
-        public List<Block> BlocksCollection { get; set; }
+        public ObservableCollection<Instrument> Instruments { get; set; }
     }
 }

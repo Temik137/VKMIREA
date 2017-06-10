@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VkMirea.CustomControls.ViewModel;
 
 namespace VkMirea.CustomControls
 {
@@ -24,5 +25,33 @@ namespace VkMirea.CustomControls
         {
             InitializeComponent();
         }
+
+        public Block(string text, string img)
+        {
+            InitializeComponent();
+            TitleName = text;
+            ImageSource = img;
+        }
+
+        public string TitleName
+        {
+            get { return (string)GetValue(TitleNameProperty); }
+            set { SetValue(TitleNameProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for Title.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty TitleNameProperty =
+            DependencyProperty.Register("TitleName", typeof(string), typeof(Block), new PropertyMetadata(null));
+
+        public string ImageSource
+        {
+            get { return (string)GetValue(ImageSourceProperty); }
+            set { SetValue(ImageSourceProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for ImageSource.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ImageSourceProperty =
+            DependencyProperty.Register("ImageSource", typeof(string), typeof(Block), new PropertyMetadata(null));
+        
     }
 }

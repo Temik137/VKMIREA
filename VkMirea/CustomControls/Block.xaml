@@ -6,13 +6,15 @@
              xmlns:local="clr-namespace:VkMirea.CustomControls"
              mc:Ignorable="d" 
              d:DesignHeight="200" d:DesignWidth="200"
-             DataContext="{Binding BlockVM, Source={StaticResource Locator}}">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition/>
-        </Grid.RowDefinitions>
-        <Image Grid.Row="0" Source="{Binding CurrentImage}" Width="{Binding Path=ActualHeight, RelativeSource={RelativeSource Self}}"/>
-        <Label Grid.Row="1" Content="{Binding Text}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-    </Grid>
+             x:Name="BlockElement">
+    <Border BorderThickness="1" BorderBrush="DarkGray">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="{Binding Path=ImageSource, ElementName=BlockElement}" MaxHeight="70" MaxWidth="70" Width="{Binding Path=ActualHeight, ElementName=BlockElement}"/>
+            <Label Grid.Row="1" Content="{Binding Path=TitleName, ElementName=BlockElement}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </Grid>
+    </Border>
 </UserControl>

@@ -45,3 +45,4 @@ C:\Src\VKMIREA\VkMirea\obj\Debug\VkMirea.exe
 C:\Src\VKMIREA\VkMirea\obj\Debug\VkMirea.pdb
 C:\Src\VKMIREA\VkMirea\obj\Debug\FrameWindow.g.cs
 C:\Src\VKMIREA\VkMirea\obj\Debug\FrameWindow.baml
+C:\Src\VKMIREA\VkMirea\obj\Debug\VkMirea.csprojResolveAssemblyReference.cache

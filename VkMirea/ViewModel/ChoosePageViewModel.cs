@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.CommandWpf;
+using VkMirea.CustomControls;
 using VkMirea.Model;
 using VkMirea.ViewModel.Commands;
 
@@ -10,6 +11,7 @@ namespace VkMirea.ViewModel
     {
         private IDataService dataService;
         private ObservableCollection<InstrumentsCollection> instrumentsList = new ObservableCollection<InstrumentsCollection>();
+        private InstrumentsCollection selectedInstrumentCollection;
         public RelayCommand GoToMainPage => AppCommands.GoToMainPageCommand;
         
 
@@ -35,6 +37,12 @@ namespace VkMirea.ViewModel
         {
             get => instrumentsList;
             set => Set(ref instrumentsList, value);
+        }
+
+        public InstrumentsCollection SelectedInstrumentCollection
+        {
+            get => selectedInstrumentCollection;
+            set => Set(ref selectedInstrumentCollection, value);
         }
     }
 }
