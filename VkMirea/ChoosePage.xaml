@@ -29,7 +29,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <ItemsControl Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=SelectedInstrumentCollection.Instruments}" Background="White">
+        <!--<ItemsControl Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=SelectedInstrumentCollection.Instruments}" Background="White">
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
                     <WrapPanel/>
@@ -40,7 +40,7 @@
                     <cc:Block TitleName="{Binding Path=Name}" ImageSource="{Binding Path=ImagePath}"/>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
-        </ItemsControl>
-            <!--<cc:BlocksViewer Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=SelectedInstrumentCollection.BlocksCollection}" />-->
+        </ItemsControl>-->
+        <cc:BlocksViewer Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Path=SelectedInstrumentCollection.Instruments}" />
     </Grid>
 </Page>

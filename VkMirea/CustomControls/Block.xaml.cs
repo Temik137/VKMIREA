@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using VkMirea.CustomControls.ViewModel;
 
 namespace VkMirea.CustomControls
 {
@@ -24,13 +23,6 @@ namespace VkMirea.CustomControls
         public Block()
         {
             InitializeComponent();
-        }
-
-        public Block(string text, string img)
-        {
-            InitializeComponent();
-            TitleName = text;
-            ImageSource = img;
         }
 
         public string TitleName

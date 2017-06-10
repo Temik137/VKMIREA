@@ -83,7 +83,6 @@
     <Compile Include="CustomControls\BlocksViewer.xaml.cs">
       <DependentUpon>BlocksViewer.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CustomControls\ViewModel\BlocksViewerViewModel.cs" />
     <Compile Include="Design\DesignDataService.cs" />
     <Compile Include="DialogWindows\InfoDialog.xaml.cs">
       <DependentUpon>InfoDialog.xaml</DependentUpon>

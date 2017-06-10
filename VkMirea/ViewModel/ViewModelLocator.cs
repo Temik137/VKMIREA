@@ -13,7 +13,6 @@ using System.Windows.Documents;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
-using VkMirea.CustomControls.ViewModel;
 using VkMirea.DialogWindows.ViewModel;
 using VkMirea.Model;
 
@@ -43,7 +42,6 @@ namespace VkMirea.ViewModel
 
             SimpleIoc.Default.Register<MainViewModel>();
             SimpleIoc.Default.Register<LoginDialogViewModel>();
-            SimpleIoc.Default.Register<BlocksViewerViewModel>();
             SimpleIoc.Default.Register<ChoosePageViewModel>();
         }
 
@@ -69,17 +67,6 @@ namespace VkMirea.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<LoginDialogViewModel>();
-            }
-        }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
-            "CA1822:MarkMembersAsStatic",
-            Justification = "This non-static member is needed for data binding purposes.")]
-        public BlocksViewerViewModel BlocksViewerVM
-        {
-            get
-            {
-                return ServiceLocator.Current.GetInstance<BlocksViewerViewModel>();
             }
         }
 
