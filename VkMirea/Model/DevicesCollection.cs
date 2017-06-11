@@ -4,9 +4,9 @@ using VkMirea.CustomControls;
 
 namespace VkMirea.Model
 {
-    public class InstrumentsCollection
+    public class DevicesCollection
     {
         public string Name { get; set; }
-        public ObservableCollection<Instrument> Instruments { get; set; }
+        public ObservableCollection<Device> Instruments { get; set; }
     }
 }

@@ -76,7 +76,6 @@
     </Compile>
     <Compile Include="Converters\BaseConverter.cs" />
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
-    <Compile Include="Converters\StringToAppModeStateConverter.cs" />
     <Compile Include="CustomControls\Block.xaml.cs">
       <DependentUpon>Block.xaml</DependentUpon>
     </Compile>
@@ -84,14 +83,14 @@
       <DependentUpon>BlocksViewer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="DevicePage.xaml.cs">
+      <DependentUpon>DevicePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DialogWindows\InfoDialog.xaml.cs">
       <DependentUpon>InfoDialog.xaml</DependentUpon>
     </Compile>
     <Compile Include="DialogWindows\LoginDialog.xaml.cs">
       <DependentUpon>LoginDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ExaminePage.xaml.cs">
-      <DependentUpon>ExaminePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="FrameWindow.xaml.cs">
       <DependentUpon>FrameWindow.xaml</DependentUpon>
@@ -102,12 +101,9 @@
     <Compile Include="Model\DataItem.cs" />
     <Compile Include="Model\DataService.cs" />
     <Compile Include="Model\IDataService.cs" />
-    <Compile Include="Model\Instrument.cs" />
-    <Compile Include="Model\InstrumentsCollection.cs" />
+    <Compile Include="Model\Device.cs" />
+    <Compile Include="Model\DevicesCollection.cs" />
     <Compile Include="Services\AppNavigationService.cs" />
-    <Compile Include="TestingPage.xaml.cs">
-      <DependentUpon>TestingPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\ChoosePageViewModel.cs" />
     <Compile Include="ViewModel\Commands\AppCommands.cs" />
     <Compile Include="DialogWindows\ViewModel\LoginDialogViewModel.cs" />
@@ -125,15 +121,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="DevicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DialogWindows\InfoDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DialogWindows\LoginDialog.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ExaminePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -152,10 +148,6 @@
     <Page Include="Skins\MainSkin.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="TestingPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -191,9 +183,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Design\Images\VkBackground.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Design\Images\randomimage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -10,19 +10,19 @@ namespace VkMirea.Model
 {
     public class DataService : IDataService
     {
-        public void GetInstrumentsCollection(Action<List<InstrumentsCollection>, Exception> callback)
+        public void GetInstrumentsCollection(Action<List<DevicesCollection>, Exception> callback)
         {
-            var item = new List<InstrumentsCollection>();
-            var list = new ObservableCollection<Instrument>();
+            var item = new List<DevicesCollection>();
+            var list = new ObservableCollection<Device>();
             var imageUri = @"C:\Src\VKMIREA\VkMirea\Design\Images\randomimage.png";
 
-            list.Add(new Instrument("first", imageUri));
-            list.Add(new Instrument("second", imageUri));
-            list.Add(new Instrument("third", imageUri));
+            list.Add(new Device("first", imageUri));
+            list.Add(new Device("second", imageUri));
+            list.Add(new Device("third", imageUri));
 
-            item.Add(new InstrumentsCollection {Instruments = list, Name = "testCollection1"});
-            item.Add(new InstrumentsCollection {Instruments = list, Name = "testCollection2"});
-            item.Add(new InstrumentsCollection {Instruments = list, Name = "testCollection3"});
+            item.Add(new DevicesCollection {Instruments = list, Name = "testCollection1"});
+            item.Add(new DevicesCollection {Instruments = list, Name = "testCollection2"});
+            item.Add(new DevicesCollection {Instruments = list, Name = "testCollection3"});
             callback(item, null);
         }
     }

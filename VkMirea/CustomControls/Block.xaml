@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              d:DesignHeight="200" d:DesignWidth="200"
              x:Name="BlockElement">
-    <Border BorderThickness="2" BorderBrush="CadetBlue" Margin="15,15,0,0">
+    <Border BorderThickness="2" BorderBrush="CadetBlue" Margin="15,15,0,0" MouseLeftButtonUp="Grid_OnMouseLeftButtonUp">
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="3*" />
@@ -19,7 +19,7 @@
                    Source="{Binding Path=ImageSource, ElementName=BlockElement}" 
                    MaxHeight="100"
                    MaxWidth="100" 
-                   Width="{Binding Path=ActualHeight, ElementName=BlockElement}"/>
+                   Height="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}" />
             <Rectangle Grid.Row="1" Fill="CadetBlue"/>
             <Label Grid.Row="2" 
                    Content="{Binding Path=TitleName, ElementName=BlockElement}" 

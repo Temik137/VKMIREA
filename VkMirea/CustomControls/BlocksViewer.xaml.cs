@@ -29,15 +29,15 @@ namespace VkMirea.CustomControls
             InitializeComponent();
         }
 
-        public ObservableCollection<Instrument> ItemsSource
+        public ObservableCollection<Device> ItemsSource
         {
-            get { return (ObservableCollection<Instrument>)GetValue(ItemsSourceProperty); }
+            get { return (ObservableCollection<Device>)GetValue(ItemsSourceProperty); }
             set { SetValue(ItemsSourceProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for ItemsSource.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ItemsSourceProperty =
-            DependencyProperty.Register("ItemsSource", typeof(ObservableCollection<Instrument>), typeof(BlocksViewer), new PropertyMetadata(null));
+            DependencyProperty.Register("ItemsSource", typeof(ObservableCollection<Device>), typeof(BlocksViewer), new PropertyMetadata(null));
 
 
     }

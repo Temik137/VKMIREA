@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VkMirea.Model;
+using VkMirea.Services;
 
 namespace VkMirea.CustomControls
 {
@@ -44,6 +46,13 @@ namespace VkMirea.CustomControls
         // Using a DependencyProperty as the backing store for ImageSource.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty ImageSourceProperty =
             DependencyProperty.Register("ImageSource", typeof(string), typeof(Block), new PropertyMetadata(null));
-        
+
+        private void Grid_OnMouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            //var device = sender
+            var device = (DataContext as Device);
+            var devicePage = new DevicePage(device);
+            AppNavigationService.NavigationService.Navigate(devicePage);
+        }
     }
 }

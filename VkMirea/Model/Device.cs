@@ -2,9 +2,9 @@
 
 namespace VkMirea.Model
 {
-    public class Instrument
+    public class Device
     {
-        public Instrument(string name, string imagePath)
+        public Device(string name, string imagePath)
         {
             Name = name;
             ImagePath = imagePath;

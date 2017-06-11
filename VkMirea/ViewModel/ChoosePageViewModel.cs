@@ -11,8 +11,8 @@ namespace VkMirea.ViewModel
     public class ChoosePageViewModel : ViewModelBase
     {
         private IDataService dataService;
-        private ObservableCollection<InstrumentsCollection> instrumentsList = new ObservableCollection<InstrumentsCollection>();
-        private InstrumentsCollection selectedInstrumentCollection;
+        private ObservableCollection<DevicesCollection> instrumentsList = new ObservableCollection<DevicesCollection>();
+        private DevicesCollection selectedDeviceCollection;
 
         #region Commands
 
@@ -41,16 +41,16 @@ namespace VkMirea.ViewModel
                                                  });
         }
 
-        public ObservableCollection<InstrumentsCollection> InstrumentsList
+        public ObservableCollection<DevicesCollection> InstrumentsList
         {
             get => instrumentsList;
             set => Set(ref instrumentsList, value);
         }
 
-        public InstrumentsCollection SelectedInstrumentCollection
+        public DevicesCollection SelectedDeviceCollection
         {
-            get => selectedInstrumentCollection;
-            set => Set(ref selectedInstrumentCollection, value);
+            get => selectedDeviceCollection;
+            set => Set(ref selectedDeviceCollection, value);
         }
     }
 }
