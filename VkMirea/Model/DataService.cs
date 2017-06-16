@@ -10,7 +10,7 @@ namespace VkMirea.Model
 {
     public class DataService : IDataService
     {
-        public void GetInstrumentsCollection(Action<List<DevicesCollection>, Exception> callback)
+        public void GetDevicesCollection(Action<List<DevicesCollection>, Exception> callback)
         {
             var item = new List<DevicesCollection>();
             var list = new ObservableCollection<Device>();

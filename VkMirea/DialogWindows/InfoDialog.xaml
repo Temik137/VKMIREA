@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VkMirea.DialogWindows"
         mc:Ignorable="d"
-        Title="InfoDialog" Height="300" Width="500" WindowStartupLocation="CenterOwner" ShowInTaskbar="False">
+        Title="InfoDialog" Height="300" Width="500" WindowStartupLocation="CenterOwner" ShowInTaskbar="False"
+        DataContext="">
     <Grid>
-        
+        <TextBox IsReadOnly="True" 
+                 VerticalScrollBarVisibility="Auto" 
+                 HorizontalScrollBarVisibility="Disabled"
+                 Margin="20" 
+                 Text="" />
     </Grid>
 </Window>

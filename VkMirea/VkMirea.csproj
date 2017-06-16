@@ -103,10 +103,12 @@
     <Compile Include="Model\IDataService.cs" />
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\DevicesCollection.cs" />
+    <Compile Include="Network\AppAdapter.cs" />
     <Compile Include="Services\AppNavigationService.cs" />
     <Compile Include="ViewModel\ChoosePageViewModel.cs" />
     <Compile Include="ViewModel\Commands\AppCommands.cs" />
     <Compile Include="DialogWindows\ViewModel\LoginDialogViewModel.cs" />
+    <Compile Include="ViewModel\DevicePageViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="ChoosePage.xaml">
@@ -184,6 +186,7 @@
   <ItemGroup>
     <Resource Include="Design\Images\VkBackground.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
