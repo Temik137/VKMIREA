@@ -98,8 +98,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Model\DataItem.cs" />
-    <Compile Include="Model\DataService.cs" />
+    <Compile Include="Model\XmlDataService.cs" />
     <Compile Include="Model\ElementsParameters\CommandAction.cs" />
     <Compile Include="Model\ElementsParameters\InteractiveType.cs" />
     <Compile Include="Model\Elements\IElement.cs" />
