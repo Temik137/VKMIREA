@@ -6,7 +6,8 @@ namespace VkMirea.Design
 {
     public class DesignDataService : IDataService
     {
-        public void GetDevicesCollection(Action<List<DevicesCollection>, Exception> callback)
+
+        public void GetDevicesCollections(Action<ICollection<DevicesCollection>, Exception> callback)
         {
             //var item = new List<InstrumentsCollection>();
             //item.Add(new InstrumentsCollection {BlocksCollection = null, Name = "testCollection1"});

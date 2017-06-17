@@ -8,10 +8,12 @@ using System.Collections.ObjectModel;
 
 namespace VkMirea.Model
 {
-    public class DataService : IDataService
+    public class XmlDataService : IDataService
     {
-        public void GetDevicesCollection(Action<List<DevicesCollection>, Exception> callback)
+        public void GetDevicesCollections(Action<ICollection<DevicesCollection>, Exception> callback)
         {
+            //TODO: Реализовать получение данных из Xml
+
             var item = new List<DevicesCollection>();
             var list = new ObservableCollection<Device>();
             var imageUri = @"C:\Src\VKMIREA\VkMirea\Design\Images\randomimage.png";
@@ -23,7 +25,7 @@ namespace VkMirea.Model
             item.Add(new DevicesCollection {Devices = list, Name = "testCollection1"});
             item.Add(new DevicesCollection {Devices = list, Name = "testCollection2"});
             item.Add(new DevicesCollection {Devices = list, Name = "testCollection3"});
-            callback(item, null);
+            callback(item, null); //TODO: Обработать возможные исключения в трай - кетч и запихнуть вместо null <--
         }
     }
 }

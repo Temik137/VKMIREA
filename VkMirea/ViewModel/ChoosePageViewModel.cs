@@ -26,7 +26,7 @@ namespace VkMirea.ViewModel
         public ChoosePageViewModel(IDataService dataService)
         {
             this.dataService = dataService;
-            dataService.GetDevicesCollection(
+            dataService.GetDevicesCollections(
                                                  (instrumentsCollections, error) =>
                                                  {
                                                      if (error != null)

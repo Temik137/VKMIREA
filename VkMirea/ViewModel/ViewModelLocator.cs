@@ -37,7 +37,7 @@ namespace VkMirea.ViewModel
             }
             else
             {
-                SimpleIoc.Default.Register<IDataService, DataService>();
+                SimpleIoc.Default.Register<IDataService, XmlDataService>();
             }
 
             SimpleIoc.Default.Register<MainViewModel>();

@@ -7,6 +7,6 @@ namespace VkMirea.Model
 {
     public interface IDataService
     {
-        void GetDevicesCollection(Action<List<DevicesCollection>, Exception> callback);
+        void GetDevicesCollections(Action<ICollection<DevicesCollection>, Exception> callback);
     }
 }
