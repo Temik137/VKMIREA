@@ -6,6 +6,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 xmlns:ignore="http://www.galasoft.ch/ignore"
              StartupUri="FrameWindow.xaml"
+             Startup="App_OnStartup"
              mc:Ignorable="d ignore">
     
     <Application.Resources>
