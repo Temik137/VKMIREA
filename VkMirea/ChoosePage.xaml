@@ -33,6 +33,6 @@
             </ListView.ItemTemplate>
         </ListView>
         <cc:BlocksViewer Grid.Column="1" Grid.Row="1"
-                         ItemsSource="{Binding Path=SelectedDeviceCollection.Instruments}" />
+                         ItemsSource="{Binding Path=SelectedDeviceCollection.Devices}" />
     </Grid>
 </Page>

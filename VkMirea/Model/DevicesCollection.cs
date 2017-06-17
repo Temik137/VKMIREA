@@ -7,6 +7,6 @@ namespace VkMirea.Model
     public class DevicesCollection
     {
         public string Name { get; set; }
-        public ObservableCollection<Device> Instruments { get; set; }
+        public ObservableCollection<Device> Devices { get; set; }
     }
 }

@@ -20,9 +20,9 @@ namespace VkMirea.Model
             list.Add(new Device("second", imageUri));
             list.Add(new Device("third", imageUri));
 
-            item.Add(new DevicesCollection {Instruments = list, Name = "testCollection1"});
-            item.Add(new DevicesCollection {Instruments = list, Name = "testCollection2"});
-            item.Add(new DevicesCollection {Instruments = list, Name = "testCollection3"});
+            item.Add(new DevicesCollection {Devices = list, Name = "testCollection1"});
+            item.Add(new DevicesCollection {Devices = list, Name = "testCollection2"});
+            item.Add(new DevicesCollection {Devices = list, Name = "testCollection3"});
             callback(item, null);
         }
     }
