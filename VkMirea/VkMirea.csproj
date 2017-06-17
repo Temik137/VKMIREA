@@ -100,6 +100,13 @@
     </Compile>
     <Compile Include="Model\DataItem.cs" />
     <Compile Include="Model\DataService.cs" />
+    <Compile Include="Model\ElementsParameters\CommandAction.cs" />
+    <Compile Include="Model\ElementsParameters\InteractiveType.cs" />
+    <Compile Include="Model\Elements\IElement.cs" />
+    <Compile Include="Model\Elements\IOnOffElement.cs" />
+    <Compile Include="Model\Elements\VkmButton.cs" />
+    <Compile Include="Model\Elements\VkmLamp.cs" />
+    <Compile Include="Model\Elements\VkmThumbler.cs" />
     <Compile Include="Model\IDataService.cs" />
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\DevicesCollection.cs" />
