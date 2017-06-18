@@ -5,8 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:VkMirea.CustomControls"
              mc:Ignorable="d"
-             d:DesignHeight="200" d:DesignWidth="200"
-             x:Name="BlockElement">
+             d:DesignHeight="200" d:DesignWidth="200">
     <Border BorderThickness="2" BorderBrush="CadetBlue" Margin="15,15,0,0" MouseLeftButtonUp="Grid_OnMouseLeftButtonUp">
         <Grid>
             <Grid.RowDefinitions>
@@ -18,11 +17,11 @@
                    Margin="3"
                    MinHeight="130"
                    MaxHeight="130"
-                   Source="{Binding Path=ImageSource, ElementName=BlockElement}"
+                   Source="{Binding Path=ImageSource, RelativeSource={RelativeSource FindAncestor, AncestorType=local:Block}}"
                    Height="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}" />
             <Rectangle Grid.Row="1" Fill="CadetBlue"/>
             <Label Grid.Row="2" 
-                   Content="{Binding Path=TitleName, ElementName=BlockElement}" 
+                   Content="{Binding Path=TitleName, RelativeSource={RelativeSource FindAncestor, AncestorType=local:Block}}" 
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center" />
         </Grid>
