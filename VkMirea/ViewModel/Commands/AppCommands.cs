@@ -18,7 +18,6 @@ namespace VkMirea.ViewModel.Commands
     {
         #region Commands
 
-        public static RelayCommand SignInCommand => new RelayCommand(OnSignIn);
         public static RelayCommand OpenLoginDialogWindowCommand => new RelayCommand(OnOpenLoginDialogWindow);
         public static RelayCommand OpenInfoDialogWindowCommand => new RelayCommand(OnOpenInfoDialogWindow);
         public static RelayCommand GoTrainingModeCommand => new RelayCommand(OnGoTrainingMode);
@@ -50,11 +49,6 @@ namespace VkMirea.ViewModel.Commands
             ChangeAppModeState(ModeState.Training);
             var chosePage = new ChoosePage();
             ChangeMainWindowContent(chosePage, true);
-        }
-
-        private static void OnSignIn()
-        {
-            throw new NotImplementedException();
         }
 
         private static void OnOpenLoginDialogWindow()
@@ -112,7 +106,7 @@ namespace VkMirea.ViewModel.Commands
 
         private static void OnShowDialogWithBlackBackground(Window dialogWindow)
         {
-            dialogWindow.Owner.OpacityMask = new SolidColorBrush { Color = Colors.Black, Opacity = 0.5 };
+            dialogWindow.Owner.OpacityMask = new SolidColorBrush {Color = Colors.Black, Opacity = 0.5};
             dialogWindow.ShowDialog();
             dialogWindow.Owner.OpacityMask = null;
         }
