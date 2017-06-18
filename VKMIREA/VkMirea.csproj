@@ -110,6 +110,8 @@
     <Compile Include="Model\Device.cs" />
     <Compile Include="Model\DevicesCollection.cs" />
     <Compile Include="Network\AppAdapter.cs" />
+    <Compile Include="Network\IClientPackage.cs" />
+    <Compile Include="Network\LoginClientPackage.cs" />
     <Compile Include="Services\AppNavigationService.cs" />
     <Compile Include="ViewModel\ChoosePageViewModel.cs" />
     <Compile Include="ViewModel\Commands\AppCommands.cs" />
