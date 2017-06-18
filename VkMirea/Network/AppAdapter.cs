@@ -49,9 +49,11 @@ namespace VkMirea.Network
             }
             catch (ArgumentNullException e)
             { //TODO: Обработать
+                return false;
             }
             catch (SocketException e)
             { //TODO: Обработать
+                return false;
             }
 
 
