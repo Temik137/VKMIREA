@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using VkMirea.DialogWindows.ViewModel;
 
 namespace VkMirea.DialogWindows
 {
@@ -19,6 +20,8 @@ namespace VkMirea.DialogWindows
     /// </summary>
     public partial class LoginDialog : Window
     {
+        private LoginDialogViewModel ViewModel => DataContext as LoginDialogViewModel;
+
         public LoginDialog()
         {
             InitializeComponent();
@@ -28,6 +31,17 @@ namespace VkMirea.DialogWindows
         {
             InitializeComponent();
             this.Owner = owner;
+            Loaded += OnLoaded;
+        }
+
+        private void OnLoaded(object sender, RoutedEventArgs routedEventArgs)
+        {
+            ViewModel.View = this;
+        }
+
+        public string GetPassword()
+        {
+            return pBox.Password;
         }
     }
 }
