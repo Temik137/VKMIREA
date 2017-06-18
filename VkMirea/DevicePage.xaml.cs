@@ -30,7 +30,7 @@ namespace VkMirea
         {
             InitializeComponent();
             DeviceName = device.Name;
-            DeviceImagePath = DeviceImagePath;
+            DeviceImagePath = device.ImagePath;
         }
         
         public string DeviceName

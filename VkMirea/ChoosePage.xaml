@@ -25,7 +25,7 @@
             <Button Content="Войти" Command="{Binding OpenLoginDialog}" Visibility="{Binding IsUnauthorized, Converter={converters:BooleanToVisibilityConverter}}" />
         </StackPanel>
         <ListView Grid.Column="0" Grid.Row="1" SelectedItem="{Binding SelectedDeviceCollection}"
-                  ItemsSource="{Binding InstrumentsList}">
+                  ItemsSource="{Binding DevicesList}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Name}" />

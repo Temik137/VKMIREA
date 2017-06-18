@@ -11,7 +11,7 @@ namespace VkMirea.ViewModel
     public class ChoosePageViewModel : ViewModelBase
     {
         private IDataService dataService;
-        private ObservableCollection<DevicesCollection> instrumentsList = new ObservableCollection<DevicesCollection>();
+        private ObservableCollection<DevicesCollection> devicesList = new ObservableCollection<DevicesCollection>();
         private DevicesCollection selectedDeviceCollection;
 
         #region Commands
@@ -27,24 +27,24 @@ namespace VkMirea.ViewModel
         {
             this.dataService = dataService;
             dataService.GetDevicesCollections(
-                                                 (instrumentsCollections, error) =>
+                                                 (devicesCollections, error) =>
                                                  {
                                                      if (error != null)
                                                      {
                                                          // Report error here
                                                          return;
                                                      }
-                                                     foreach (var instrumentsCollection in instrumentsCollections)
+                                                     foreach (var devicesCollection in devicesCollections)
                                                      {
-                                                         InstrumentsList.Add(instrumentsCollection);
+                                                         DevicesList.Add(devicesCollection);
                                                      }
                                                  });
         }
 
-        public ObservableCollection<DevicesCollection> InstrumentsList
+        public ObservableCollection<DevicesCollection> DevicesList
         {
-            get => instrumentsList;
-            set => Set(ref instrumentsList, value);
+            get => devicesList;
+            set => Set(ref devicesList, value);
         }
 
         public DevicesCollection SelectedDeviceCollection

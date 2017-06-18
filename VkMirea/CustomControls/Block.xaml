@@ -15,10 +15,10 @@
                 <RowDefinition />
             </Grid.RowDefinitions>
             <Image Grid.Row="0" 
-                   Margin="10"
-                   Source="{Binding Path=ImageSource, ElementName=BlockElement}" 
-                   MaxHeight="100"
-                   MaxWidth="100" 
+                   Margin="3"
+                   MinHeight="130"
+                   MaxHeight="130"
+                   Source="{Binding Path=ImageSource, ElementName=BlockElement}"
                    Height="{Binding RelativeSource={RelativeSource Self}, Path=ActualWidth}" />
             <Rectangle Grid.Row="1" Fill="CadetBlue"/>
             <Label Grid.Row="2" 
